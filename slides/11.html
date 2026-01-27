@@ -1,0 +1,22 @@
+!style=black
+!enter_slide=play_hidden_spv
+!exit_slide=stop_hidden_spv
+
+<script>
+function play_hidden_spv() {
+    document.getElementById("hidden_spv").currentTime = 0;
+    document.getElementById("hidden_spv").load();
+    document.getElementById("hidden_spv").play();
+}
+</script>
+
+<script>
+function stop_hidden_spv() {
+    document.getElementById("hidden_spv").pause();
+}
+</script>
+
+<video class='full-slide' id='hidden_spv'>
+<source src='_static/hidden-spv-smaller.mp4' type='video/mp4'>
+    Your browser does not support the video tag.
+</video>

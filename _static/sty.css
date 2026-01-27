@@ -46,15 +46,20 @@ height: 100%;
 img.top-half {position:absolute;height:48vh;top:1vh;left:50vw;transform:translate(-50%,0);}
 video.full-slide,
 img.full-slide {position:absolute;height:100vh;top:0vh;left:50vw;transform:translate(-50%,0);}
+img.full-slide-stretch {position:absolute;height:100vh;width:100vw;top:0vh;left:0vw}
 img.full-slide-wide {position:absolute;width:100vw;left:0vw;top:50vh;transform:translate(0,-50%);}
 img.full-slide.below-title {height:90vh;top:10vh}
 img.left-half {position:absolute;width:48vw;left:1vw;top:50vh;transform:translate(0,-50%);}
 img.right-half {position:absolute;width:48vw;right:1vw;top:50vh;transform:translate(0,-50%);}
+img.top-left-quarter {position:absolute;height:48vh;right:52vw;top:25vh;transform:translate(0,-50%);}
+img.top-right-quarter {position:absolute;height:48vh;left:52vw;top:25vh;transform:translate(0,-50%);}
+img.bottom-left-quarter {position:absolute;height:48vh;right:52vw;bottom:25vh;transform:translate(0,50%);}
+img.bottom-right-quarter {position:absolute;height:48vh;left:52vw;bottom:25vh;transform:translate(0,50%);}
 
 .slide {position:absolute;top:0;bottom:0;left:0;right:0}
 
 /* default (a slide) */
-.default.slide .title {text-align:center;font-size:10vh;font-family:ralewaysemibold;position:absolute;top:3vh;left:10vw;right:10vw;z-index:5}
+.slide .title {text-align:center;font-size:10vh;font-family:ralewaysemibold;position:absolute;top:3vh;left:10vw;right:10vw;z-index:5}
 
 /* black */
 .black.slide {background-color:#000000; color:#FFFFFF}

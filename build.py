@@ -15,11 +15,21 @@ os.system("cp -r _static build/_static")
 os.system("cp -r test.html build/")
 
 slides = []
-i = 0
-while os.path.isfile(f"slides/{i}.html"):
+
+try:
+    with open("slides/list.config") as f:
+        slide_files = [f"slides/{line.strip()}.html" for line in f]
+except FileNotFoundError:
+    slide_files = []
+    i = 0
+    while os.path.isfile(f"slides/{i}.html"):
+        slide_files.append(f"slides/{i}.html")
+        i += 1
+
+for file in slide_files:
     settings = {"style": "default", "enter_slide": "false", "exit_slide": "false"}
     page = ""
-    with open(f"slides/{i}.html") as f:
+    with open(file) as f:
         for line in f:
             if line[0] == "!":
                 key, value = line[1:].split("=", 1)
@@ -39,7 +49,6 @@ while os.path.isfile(f"slides/{i}.html"):
             else:
                 page += line
         slides.append(make_slide(page, settings))
-    i += 1
 
 with open("_template.html") as f:
     t = f.read()

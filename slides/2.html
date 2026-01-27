@@ -1,7 +1,22 @@
-BOLD TRANSITION
-<newslide>
-A slide
-<newslide transition='scarlet'>
-ANOTHER SLIDE
-<newlide>
-Libreoffice?
+!style=black
+!enter_slide=play_torchy
+!exit_slide=stop_torchy
+
+<script>
+function play_torchy() {
+    document.getElementById("torchy").currentTime = 0;
+    document.getElementById("torchy").load();
+    document.getElementById("torchy").play();
+}
+</script>
+
+<script>
+function stop_torchy() {
+    document.getElementById("torchy").pause();
+}
+</script>
+
+<video class='full-slide' id='torchy'>
+<source src='_static/torchy-clip-smaller.mp4' type='video/mp4'>
+    Your browser does not support the video tag.
+</video>

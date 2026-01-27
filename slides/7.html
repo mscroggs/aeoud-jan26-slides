@@ -1,2 +1,22 @@
-!style=title
-<center style='margin-top:1vh'>End of presentation. Press F11 to exit full screen.</center>
+!style=black
+!enter_slide=play_scarlet_dies
+!exit_slide=stop_scarlet_dies
+
+<script>
+function play_scarlet_dies() {
+    document.getElementById("scarlet_dies").currentTime = 0;
+    document.getElementById("scarlet_dies").load();
+    document.getElementById("scarlet_dies").play();
+}
+</script>
+
+<script>
+function stop_scarlet_dies() {
+    document.getElementById("scarlet_dies").pause();
+}
+</script>
+
+<video class='full-slide' id='scarlet_dies'>
+<source src='_static/scarlet-dies-smaller.mp4' type='video/mp4'>
+    Your browser does not support the video tag.
+</video>

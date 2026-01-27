@@ -1,0 +1,22 @@
+!style=black
+!enter_slide=play_transition
+!exit_slide=stop_transition
+
+<script>
+function play_transition() {
+    document.getElementById("transition").currentTime = 0;
+    document.getElementById("transition").load();
+    document.getElementById("transition").play();
+}
+</script>
+
+<script>
+function stop_transition() {
+    document.getElementById("transition").pause();
+}
+</script>
+
+<video class='full-slide' id='transition'>
+<source src='_static/transition-smaller.mp4' type='video/mp4'>
+    Your browser does not support the video tag.
+</video>
